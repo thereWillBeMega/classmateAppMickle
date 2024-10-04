@@ -77,6 +77,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="error text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-rm-6oo">
+                                <rect key="frame" x="156" y="159" width="80" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2JA-se-VHM"/>
                         <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
@@ -84,6 +91,7 @@
                     <navigationItem key="navigationItem" id="djT-TA-NI6"/>
                     <connections>
                         <outlet property="AgeOutlet" destination="t6E-zf-zJn" id="YRF-EQ-Lh4"/>
+                        <outlet property="errorOutlet" destination="tUo-rm-6oo" id="ejx-2y-tON"/>
                         <outlet property="nameOutlet" destination="CEF-BC-ucd" id="Phk-mo-fzL"/>
                         <outlet property="nicknameOutlet" destination="pra-yP-SNg" id="Z0j-HP-D4f"/>
                     </connections>

@@ -26,4 +26,8 @@ class Classmate{
         self.nickname = "nill"
     }
     
+    
+
+    
+    
 }
