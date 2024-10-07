@@ -56,6 +56,9 @@ class ViewControllerStudents: UIViewController {
     
     
     @IBAction func addAction(_ sender: UIButton) {
+        
+        
+        
     }
     
     
@@ -70,15 +73,19 @@ class ViewControllerStudents: UIViewController {
             nicknameOutlet.isEnabled = true
             nicknameOutlet.text = AppData.students[AppData.curStudent].nickname
         }else{
-            if case  AppData.students[AppData.curStudent].name = nameOutlet.text{
+            if let curName = nameOutlet.text{
                 print("yay")
-                if case String(AppData.students[AppData.curStudent].age) = AgeOutlet.text{
+                if let curAge = Int(AgeOutlet.text!){
                     print("yay2")
-                    if case AppData.students[AppData.curStudent].nickname = nicknameOutlet.text{
+                    if let curNickname = nicknameOutlet.text{
                         print("yay3")
+                        AppData.students[AppData.curStudent].nickname = curNickname
+                        AppData.students[AppData.curStudent].name = curName
+                        AppData.students[AppData.curStudent].age = curAge
                         updateStudentDisplay()
                         editify = false
                         sender.setTitle("edit", for: .normal)
+              
                         nameOutlet.isEnabled = false
                        
                         AgeOutlet.isEnabled = false
