@@ -56,15 +56,43 @@ class ViewControllerStudents: UIViewController {
     
     
     @IBAction func addAction(_ sender: UIButton) {
-        
-        
-        
+        if editify{
+            errorOutlet.text = "cannot add and edit!"
+        }else{
+            if !adding{
+                adding = true
+                sender.setTitle("confrom", for: .normal)
+                errorOutlet.text = "add something"
+                nameOutlet.isEnabled = true
+                nameOutlet.text = "Jane Doe"
+                AgeOutlet.isEnabled = true
+                AgeOutlet.text = "21"
+                nicknameOutlet.isEnabled = true
+                nicknameOutlet.text = "nill"
+            }else{
+                adding = false
+                errorOutlet.text = ""
+                if let curAge: Int = Int(AgeOutlet.text!){
+                    AppData.students.append(Classmate(name: nameOutlet.text ?? "", age: curAge, nickname: nicknameOutlet.text ?? ""))
+                    AppData.curStudent = AppData.students.count - 1
+                    updateStudentDisplay()
+                    sender.setTitle("add", for: .normal)
+                    
+                }
+
+            }
+            
+        }
     }
     
     
     @IBAction func editAction(_ sender: UIButton) {
+        if adding{
+            errorOutlet.text = "cannot add and edit!"
+        }else{
         if !editify{
             editify = true
+            errorOutlet.text = "edit the student!"
             sender.setTitle("confrom", for: .normal)
             nameOutlet.isEnabled = true
             nameOutlet.text = AppData.students[AppData.curStudent].name
@@ -84,10 +112,11 @@ class ViewControllerStudents: UIViewController {
                         AppData.students[AppData.curStudent].age = curAge
                         updateStudentDisplay()
                         editify = false
+                        errorOutlet.text = ""
                         sender.setTitle("edit", for: .normal)
-              
+                        
                         nameOutlet.isEnabled = false
-                       
+                        
                         AgeOutlet.isEnabled = false
                         nicknameOutlet.isEnabled = false
                     }else{
@@ -97,9 +126,9 @@ class ViewControllerStudents: UIViewController {
                     errorOutlet.text = "invalad input age"
                 }
             }else {
-                    errorOutlet.text = "invalad input name"
-                }
-                
+                errorOutlet.text = "invalad input name"
+            }
+        }
             }
             
         }
@@ -114,6 +143,7 @@ class ViewControllerStudents: UIViewController {
          // Pass the selected object to the new view controller.
          }
          */
-        
+
     }
+
 
