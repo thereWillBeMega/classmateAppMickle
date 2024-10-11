@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		377EF98F2CB952DD004C060E /* CrazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377EF98E2CB952DD004C060E /* CrazyCell.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3778B1D12CAD70650058CCA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		3778B1B72CAD70630058CCA1 /* classmateAppMickle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = classmateAppMickle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3778B1D02CAD70650058CCA1 /* classmateAppMickleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classmateAppMickleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3778B1DA2CAD70650058CCA1 /* classmateAppMickleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = classmateAppMickleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		377EF98E2CB952DD004C060E /* CrazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +93,7 @@
 		3778B1AE2CAD70630058CCA1 = {
 			isa = PBXGroup;
 			children = (
+				377EF98E2CB952DD004C060E /* CrazyCell.swift */,
 				3778B1B92CAD70630058CCA1 /* classmateAppMickle */,
 				3778B1D32CAD70650058CCA1 /* classmateAppMickleTests */,
 				3778B1DD2CAD70650058CCA1 /* classmateAppMickleUITests */,
@@ -249,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377EF98F2CB952DD004C060E /* CrazyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

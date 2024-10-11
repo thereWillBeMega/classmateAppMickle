@@ -62,7 +62,7 @@ class ViewControllerStudents: UIViewController {
             if !adding{
                 adding = true
                 sender.setTitle("confrom", for: .normal)
-                errorOutlet.text = "add something"
+                errorOutlet.text = "add a student"
                 nameOutlet.isEnabled = true
                 nameOutlet.text = "Jane Doe"
                 AgeOutlet.isEnabled = true
